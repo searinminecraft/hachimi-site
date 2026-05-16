@@ -10,7 +10,8 @@ const defineSupportLocales = [
   'zh-cn',
   'zh-tw',
   'id',
-  'ja'
+  'ja',
+  'fil'
 ];
 const host = 'https://hachimi.noccu.art'
 
@@ -157,6 +158,18 @@ const vitePressConfig: UserConfig = {
           { text: 'スクリーンショット', link: '/ja/#screenshots' },
           { text: 'ドキュメント', link: '/ja/docs' },
           { text: 'クレジット', link: '/ja/credits' }
+        ]
+      }
+    },
+    fil: {
+      label: "Filipino",
+      lang: "fil",
+      themeConfig: {
+        nav: [
+          { text: 'Home', link: '/fil/' },
+          { text: 'Mga Screenshot', link: '/fil/#screenshots' },
+          { text: 'Dokumentasyon', link: '/fil/docs' },
+          { text: 'Credits', link: '/fil/credits' }
         ]
       }
     }

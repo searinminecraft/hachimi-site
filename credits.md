@@ -57,3 +57,9 @@ Alternate versions:
 - Maintainer: Ahtheerr
 - Contributors:
   [![Graph](https://contrib.rocks/image?repo=Ahtheerr/hachimi-tl-br)](https://github.com/Ahtheerr/hachimi-tl-br/graphs/contributors)
+
+## [Filipino translations (Global)](https://github.com/searinminecraft/hachimi-fil-glb)
+
+- Maintainer: searinminecraft (Vyxie)
+- Contributors:
+  [![Graph](https://contrib.rocks/image?repo=searinminecraft/hachimi-fil-glb)](https://github.com/searinminecraft/hachimi-fil-glb/graphs/contributors)

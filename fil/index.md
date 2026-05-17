@@ -78,6 +78,8 @@ Tignan ang mga mga sources sa higit pang detalye sa [credits page](/fil/credits)
 
 ## Mga screenshot {#screenshots}
 
+<!-- TODO: provide screenshots in Filipino once its complete enough -->
+
 <div class="gallery">
   <img class="item grid-4" src="/assets/screen1.jpg" alt="Home screen">
   <img class="item grid-4" src="/assets/screen2.jpg" alt="Training screen">

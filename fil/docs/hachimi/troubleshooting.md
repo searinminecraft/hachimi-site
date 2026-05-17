@@ -18,7 +18,7 @@ Tignan ang [guide ng GameTora](https://gametora.com/umamusume/playing-on-dmm) pa
 ::: details Kailangan ko ng VPN para maglaro.
 Kung nagpapasya kang gumamit ng OpenVPN (gamit ang UmaVPN.top), inirerekomenda na gamitin ang v2.7 client dahil sinusuportahan nito ang split tunneling (piliin iyan kapag nagda-download mula sa UmaVPN). Ang mga lumang bersyon ay nangangailangan ng pinning script sa guide sa itaas, na madaling mag-update ng mga isyu at hindi kasama ang mga mas bagong domain.
 
-Sinusuportahan lang ng mga VPN (lalo na ang VPN Gate, na ginagamit ng UmaVPN) ang IPv4. Maaari mong subukang [i-unbind ang IPv6 mula sa adapter na ginagamit mo](https://networking.grok.lsu.edu/article.aspx?articleid=17573), pero **pakitandaan na maaari itong magdulot ng ibang isyu**, sa lalong madaling panahon.
+Sinusuportahan lang ng mga VPN (lalo na ang VPN Gate, na ginagamit ng UmaVPN) ang IPv4. Maaari mong subukang [i-unbind ang IPv6 mula sa adapter na ginagamit mo](https://networking.grok.lsu.edu/article.aspx?articleid=17573), pero **pakitandaan na maaari itong magdulot ng ibang isyu**.
 
 Ang isang mas ligtas na paraan ay dapat na [i-prefer ang IPv4](https://learn.microsoft.com/en-us/troubleshoot/windows-server/networking/configure-ipv6-in-windows#use-registry-key-to-configure-ipv6), ngunit ito ay mas kasangkot at ang pagiging matulungin nito ay kasalukuyang hindi pa nasubok.
 
@@ -107,7 +107,7 @@ Ang mga translations ay ibinibigay ng mga community volunteers na nag-aalok ng k
 
 ### "Account restricted" na mensahe
 
-Banned ka kapag ganito
+Banned ka kung ganoon
 
 ## Windows
 
@@ -172,7 +172,7 @@ Kapag gusto mong i-enable ulit ang Hachimi overlay, buksan ang config file ng Ha
 
 DotLocal DLL redirection ang paraan na ginagamit ng Hachimi para sa pag-load ng **DMM** version ng laro. na nagdudulot sa mga isyu sa ilang anti-cheat (hal. Vanguard).
 Kailangan mong i-disable ang DLL redirection sa tuwing gusto mong laruin ang naapektong laro.  
-Isang maliit na program ang [DotLocalToggle](https://github.com/LeadRDRK/DotLocalToggle/releases/) na nagbibigay-daan sa iyo na madali itong i-toggle
+Isang maliit na program ang [DotLocalToggle](https://github.com/LeadRDRK/DotLocalToggle/releases/) na nagbibigay-daan sa iyo na madali itong i-toggle.  
 Bilang alternatibo, laruin ang **JP Steam** version.
 
 ### Installer: "Code execution cannot proceed / VCRUNTIME" na error
@@ -349,10 +349,10 @@ Kapag patuloy na pinapakita ang error na ito sa iyong device, maaaring ipahiwati
 
 ## Mga emulator (kasama ang Google Play Games)
 
-Hindi sinusuportahan ng Hachimi o laro ang mga emulator. Maaari mo silang paganahin, pero bahala ka na diyan. Para maglaro sa PC. Gamitin ang DMM o Steam client.
+Hindi sinusuportahan ng Hachimi o laro ang mga emulator. Maaari mo silang paganahin, pero bahala ka na diyan. Para maglaro sa PC, gamitin ang DMM o Steam client.
 
 ## Hindi nakalista dito ang aking isyu
 
-I-uninstall ang Hachimi gamit ang installer. Subukang gamitin ang bersyong ginamit mo sa pag-install ng kasalukuyan mong bersyon, ngunit dapat ay gumana nang maayos ang pinakabago.
+I-uninstall ang Hachimi gamit ang installer. Subukang gamitin ang version na ginamit mo sa pag-install ng kasalukuyan mong version, ngunit dapat ay gumana nang maayos ang pinakabago.
 Kung may marami kang version ng laro na naka-install, siguraduhin na nag-uninstall ka sa tamang path. at i-reinstall ang pinakabagong Hachimi Edge.
 Kung hindi ito gumana, maaari kang magtanong sa `help/support` channel sa [Hachimi Project Discord](https://discord.gg/hachimimod). Pakisabi ang iyong game server, device platform at model, at malinaw na ipaliwanag ang iyong isyu at kung ano ang iyong sinubukan.

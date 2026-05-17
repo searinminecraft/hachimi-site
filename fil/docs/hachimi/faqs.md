@@ -1,4 +1,4 @@
-# FAQs
+# Mga FAQ
 
 ## Paaano gumamit ng ibang mods kasama ang Hachimi Edge?
 
@@ -61,13 +61,13 @@ Kinakailangan lang ang pag-uninstall ng laro para sa pinakaunang install, hindi 
 
 Ang notification sa pag-update mula sa Play Store ay nangangahulugan na kailangan mong i-update ang laro mismo sa pamamagitan ng pag-download ng pinakabagong APK ng laro. Pagkatapos ay kailangan mong i-install ang mga bagong file na iyon sa pamamagitan ng UmaPatcher, na siyang maga-apply din ng pinakabagong available na Hachimi Edge release.
 
-Sundan ang [install guide](installing-android#using-umapatcher-edge-recommended) mula sa step 4.
+Sundan ang [install guide](installing-android#gamit-ang-umapatcher-edge-inirerekomenda) mula sa step 4.
 
 ### Hachimi
 
 Kapag may bagong bersyon ng Hachimi na na-release, maaari mong piliin na i-install para sa mga bagong features at updates. **Hindi mo naman kailangan** na gawin mo ito kaagad. Ang paggawa nito ay nangangailangan ng pag-patch muli.
 
-Sundin ang [install guide](installing-android#using-umapatcher-edge-recommended) mula sa step 5 para i-reinstall ang kasalukuyang game version, or mula sa step 4 kapag hindi na nasa iyo ang mga pinakabagong APK ng laro.
+Sundin ang [install guide](installing-android#gamit-ang-umapatcher-edge-inirerekomenda) mula sa step 5 para i-reinstall ang kasalukuyang game version, or mula sa step 4 kapag hindi na nasa iyo ang mga pinakabagong APK ng laro.
 
 ### UmaPatcher
 

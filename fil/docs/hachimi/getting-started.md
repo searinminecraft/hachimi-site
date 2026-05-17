@@ -87,4 +87,4 @@ Kung may mga isyu ka sa translations, maaari mo silang i-disable sa Config Edito
 ## Paggamit
 
 Ginagawa ang configuration gamit ang [in-game menu](built-in-gui) o sa pamamagitan ng [raw config file](config).  
-Sinusuportahan rin ng Hachimi Edge ang [Mga Plugin](plugins/about).
+Sinusuportahan rin ng Hachimi Edge ang [Mga Plugin](../plugins/about).

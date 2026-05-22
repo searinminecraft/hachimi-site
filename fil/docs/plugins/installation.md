@@ -1,22 +1,26 @@
-# Installing plugins
+---
+title: Pag-install
+---
 
-This guide explains how to install and configure plugins for Hachimi Edge.
+# Pag-install ng mga plugin <!-- markdownlint-disable-line MD025 -->
 
-::: danger ⚠️ SECURITY WARNING
-Only install plugins from sources and developers you trust! The Hachimi Edge developers are not responible for issues or damage from third-party plugins.
+Ipinapaliwanag ng guide na ito kung paano i-install at i-configure ang mga plugin para sa Hachimi Edge.
 
-Malicious plugins can steal game account credentials, result in bans, execute arbitrary code as if from the game, etc.
+::: danger ⚠️ BABALA SA SEGURIDAD
+Mag-install lamang ng mga plugin mula sa mga source at developer na iyong pinagkakatiwalaan! Hindi mananagot ang mga developer ng Hachimi Edge para sa mga isyu o pinsala mula sa mga third party plugins.
 
-🚨 **On Windows, plugins have FULL ADMINISTRATOR ACCESS to your entire system. They can install malware, modify system files, access all your data, etc.**
+Maaaring nakawin ng mga malisyosong na plugin ang mga kredensyal ng account sa laro, magresulta sa pagka-ban ng account, mag-execute ng arbitraryong code na parang galing sa laro, atbp.
+
+🚨 **Sa Windows, may BUONG ACCESS SA ADMINISTRATOR ang mga plugin sa iyong system. Maaari silang maka-install ng malware, baguhin ang mga system files, i-access ang lahat ng data mo, atbp.**
 :::
 
-## Windows installation
+## Pag-install sa Windows
 
-On Windows, plugins must be explicitly configured in the config file.
+Sa Windows, ang mga plugin ay dapat i-configure sa config file.
 
-1. **Locate the plugin file**: You should have a `.dll` file (e.g. `hachimi_myplugin.dll`).
-1. **Place the plugin in the hachimi folder**: Put the plugin file in the [`hachimi` folder](/docs/hachimi/faqs.md#how-do-i-find-the-game-install-folder).
-1. **Edit the config**: Open `config.json` in the `hachimi` folder and add the plugin filename:
+1. **Hanapin ang plugin file**: Dapat may `.dll` file ka (e.g. `hachimi_myplugin.dll`).
+1. **Ilagay ang plugin sa `hachimi` folder**: Ilagay ang plugin sa [`hachimi` folder](../hachimi/faqs.md#paano-ko-hanapin-ang-install-folder-ng-laro).
+1. **I-edit ang config**: Buksan ang `config.json` sa `hachimi` folder idagdag ang plugin name:
    ```json
    {
      "windows": {
@@ -26,62 +30,62 @@ On Windows, plugins must be explicitly configured in the config file.
      }
    }
    ```
-1. **Save and restart**: Save the config file and restart the game
+1. **I-save at i-restart**: I-save ang config file at i-restart ang laro
 
-## Android installation
+## Pag-install sa Android 
 
-On Android, plugins must be added through UmaPatcher Edge before patching the game.
+Sa Android, dapat idagdag ang mga plugin sa UmaPatcher Edge bago i-patch ang laro
 
-1. **Prepare the plugin file**: You should have a `.so` file (e.g. `libmyplugin.so`).
-1. **Open UmaPatcher Edge**: Launch the UmaPatcher Edge app.
-1. **Add the plugin**:
-   - On the home screen, scroll down to the "Plugins" section.
-   - Tap the "Add Plugin" button.
-   - Select your plugin `.so` file from your device.
-   - The plugin will be added to the list and enabled by default.
-1. **Manage plugins** (optional):
-   - You can enable/disable plugins using the checkbox next to each plugin.
-   - Tap "Remove" to delete a plugin from the list.
-1. **Patch the game**: Follow the normal [UmaPatcher Edge installation guide](/docs/hachimi/installing-android.md) to patch and install the game.
-1. **Verify**: Launch the game. If the plugin loaded successfully, you should see its effects or menu items in Hachimi's built-in GUI.
+1. **Ihanda ang plugin file**: Dapay may `.so` file ka (hal. `libmyplugin.so`).
+1. **Buksan ang UmaPatcher Edge**: Buksan ang UmaPatcher Edge app.
+1. **Idagdag ang plugin**:
+   - Sa home screen mag-scroll pababa at hanapin ang "Plugins" section.
+   - I-tap ang "Add Plugin" button.
+   - Piliin ang iyong `.so` file mula sa iyong device.
+   - Idadagdag ang plugin sa listahan at naka-enable bilang default.
+1. **Ipamahala ang mga plugin** (opsyonal):
+   - Maaari mong i-enable/i-disable ang mga plugin gamit ang checkbox sa tabi ng bawat plugin.
+   - I-tap ang "Remove" para burahin ang plugin mula sa listahan.
+1. **I-patch ang laro**: Sundan ang normal na [guide sa pag-install gamit ang UmaPatcher Edge](../hachimi/installing-android#gamit-ang-umapatcher-edge-inirerekomenda) para i-patch at i-install ang laro.
+1. **I-verify**: Buksan ang laro. Kapag matagumpay na mag-load ang mga plugin, makikita mo ang mga epekto nito o menu items nito sa built-in GUI ng Hachimi.
 
 ::: tip
-When updating the game, your plugins are preserved in UmaPatcher Edge. Just patch the new version and they will be included automatically.
+Kapag i-update mo ang laro, pinapanatili sa UmaPatcher Edge ang iyong mga plugin. I-patch lang ang bagong version at awtomatiko silang isasama.
 :::
 
-## Disabling plugins
+## Pag-disable ng mga plugin
 
 ### Windows
 
-- Remove the plugin from the `load_libraries` array in `config.json`.
+- Tanggalin ang plugin mula sa `load_libraries` array sa `config.json`.
 
 ### Android
 
-- Open UmaPatcher Edge.
-- Uncheck the plugin in the Plugins section.
-- Re-patch the game.
+- Buksan ang UmaPatcher Edge.
+- I-uncheck ang plugin sa Plugins section.
+- I-repatch ang laro.
 
-## Plugin troubleshooting
+## Pag-troubleshoot ng plugins
 
-### Plugin not loading
+### Hindi naglo-load ang plugin
 
-On Windows:
+Sa Windows:
 
-- Verify the path in `config.json` is correct.
-- Verify the plugin is compatible with your Hachimi version.
+- Siguraduhin na tama ang path sa `config.json`.
+- Siguraduhin na compatible sa iyong Hachimi version ang plugin.
 
-On Android:
+Sa Android:
 
-- Ensure the plugin was added in UmaPatcher Edge before patching.
-- Check if the plugin is compatible with your Hachimi version.
-- Try re-patching the game with the plugin enabled.
+- Siguraduhin na nakadagdag sa UmaPatcher Edge ang plugin bago i-patch.
+- Tignan kung compatible sa iyong Hachimi version ang plugin..
+- Subukang i-patch ulit ang laro nang naka-enable ang plugin.
 
-### Plugin crashes or doesn't work
+### Hindi gumagana o nagka-crash ang plugin
 
-If a plugin causes crashes or doesn't function correctly:
+Kapag nagdudulot sa pag-crash o hindi gumagana ang plugin:
 
-- **Contact the plugin author**: Plugin-specific issues should be reported to the plugin developer.
+- **Makipagugnayan sa plugin author**: Dapat iulat sa plugin developer ang mga isyung kaugnay sa plugin.
 
-## Next steps
+## Mga susunod na gagawin
 
-- Learn about [creating your own plugins](development).
+- Matuto kung [paano gumawa ng sarili mong plugin](development).

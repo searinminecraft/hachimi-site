@@ -61,7 +61,7 @@ Dynamic na ina-apply ang mga pagbabago, hindi kailangan ng asset patching!
 
 ## Mga plugin
 
-Sinusuportahan ng Hachimi Edge ang isang [plugin system](/fil/plugins/about) na nagbibigay-daan sa pagpapalawak ng functionality nito.
+Sinusuportahan ng Hachimi Edge ang isang [plugin system](docs/plugins/about) na nagbibigay-daan sa pagpapalawak ng functionality nito.
 
 ## UmaPatcher
 
@@ -74,7 +74,7 @@ Ini-index ang mga translation sources mula sa iba't ibang community projects. Na
 
 Hindi nahahanap ang mga translations para sa bagong content? Naghahanap ng ibang wika? Mas marami at up-to-date na mga repositoryo ang ini-index ng Hachimi Edge kaysa sa orihinal.
 
-Tignan ang mga mga sources sa higit pang detalye sa [credits page](/fil/credits) para sa general na impormasyon, progress, tulong at pakikipagugnayan. Subukang suportahan ang mga contributors!
+Tignan ang mga mga sources sa higit pang detalye sa [credits page](credits) para sa general na impormasyon, progress, tulong at pakikipagugnayan. Subukang suportahan ang mga contributors!
 
 ## Mga screenshot {#screenshots}
 

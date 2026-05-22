@@ -5,13 +5,13 @@ Ginagamit ang DotLocal DLL redirection ang proseso ng pag-install sa DMM.
 Di ito compatible sa ilang anti-cheats (hal. Vanguard, na ginagamit sa LoL/Valorant) at kailangang i-disable sa tuwing gusto mong laruin ang mga naapektuhang laro. Maaari mong gamitin ang [DotLocalToggle](https://github.com/LeadRDRK/DotLocalToggle/releases) para madali itong i-toggle. Hindi inaapektuhan ang Steam.
 :::
 
-::: details Legacy: Paglipat mula sa deprecated na shimming method (Shinmy)
+::: details Legacy: Paglipat mula sa deprecated na shimming method (Shimmy)
 Kailangan mo munang buong i-uninstall ang Shimmy; siguraduhin na hindi ito tumatakbo kapag binubura mo ito dahil nananatili ito hanggang 30 segundo pagkatapos magsara ang DMM at maaaring mabalik sa sarili. **Ang pinakamadaling paraan ay ang paggamit ng mismong installer** (na uninstaller din), lilinisin nito ang lahat para sa iyo.
 
 Pagkatapos niyan, maaari mo nang i-uninstall ang Hachimi gaya ng dati.
 :::
 
-## Paggamit ng installer (inirerekomenda)
+## Gamit ang installer (inirerekomenda)
 
 1. I-download ang pinakabagong [Installer](https://github.com/kairusds/Hachimi-Edge/releases/latest/download/hachimi_installer.exe) at patakbuhin ito.
 1. Kapag ginamit mo dati ang hindi edge na Hachimi, pindutin muna ang "Uninstall".

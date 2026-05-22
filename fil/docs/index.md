@@ -28,14 +28,14 @@ Mag-contribute [sa site repo](https://github.com/UmaTL/hachimi-site) o sumali sa
 ### Bilang game translator
 
 Hindi pinapamahala ng Hachimi Edge ang mga game translations.
-Kung kailangan mo ng tulong para diyan, tignan ang [Translation Guide](translation-guide/welcome) at makipag-ugnayan sa [isa sa mga game translation projects](credits)
+Kung kailangan mo ng tulong para diyan, tignan ang [Translation Guide](/docs/translation-guide/welcome) at makipag-ugnayan sa [isa sa mga game translation projects](../credits)
 Maaari pa ring maging kapaki-pakinabang ang paggamit ng Discord para manatiling updated o magtanong ng mga technical na katanungan. Makipag-ugnayan sa isa sa mga 'Server Managers' para makakuha ng posisyon.
 
 #### Paggawa ng sarili mong translation source
 
 Walang project para sa iyong wika o hindi ka sumasang-ayon sa mga available? Magsimula ng iyong sarili!
-Kapag familiar ka na sa [Translation Guide](translation-guide/welcome), matutuong [mag-configure ng isang repo](translation-guide/repo-config) at i-submit ang iyong project [sa index ng Hachimi Edge](https://github.com/UmaTL/hachimi-meta).
-Maaari mong tignan ang mga [umiiral na projects](/credits) bilang reference.
+Kapag familiar ka na sa [Translation Guide](/docs/translation-guide/welcome), matutuong [mag-configure ng isang repo](/docs/translation-guide/repo-config) at i-submit ang iyong project [sa index ng Hachimi Edge](https://github.com/UmaTL/hachimi-meta).
+Maaari mong tignan ang mga [umiiral na projects](../credits) bilang reference.
 **Paalala**: Inirerekomenda namin na manatili sa isang proyekto bawat wika kapag posible para iwasan ang fragmentation ang dobleng pagtrabaho. Kung hindi, siguraduhin na sinusundan mo ang mga tuntunin ng proyekto, huwag lang basta mag-fork.
 
 ### Bilang katulong ng komunidad

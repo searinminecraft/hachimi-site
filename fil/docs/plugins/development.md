@@ -1,38 +1,41 @@
-# Plugin development guide
+---
+title: Pag-develop
+---
 
-This guide will help you create plugins for Hachimi Edge. Plugins are dynamic libraries that extend Hachimi's functionality through a well-defined C-compatible API.
+# Guide sa pag-develop ng plugin <!-- markdownlint-disable-line MD025 -->
 
-## Language choice
+Tutulungan ka ng guide na ito sa paggawa ng mga plugins para sa Hachimi Edge. Ang mga plugin ay isang dynamic library na nagpapalawak ng functionality ng Hachimi sa pamamagitan ng well-defined na C-compaible API
 
-Plugins can be written in **any language** that can produce a C-compatible dynamic library (`.so` on Android, `.dll` on Windows). This includes:
+## Choice sa programming language
 
-- **Rust** (recommended — examples in this guide use Rust)
+Maaaring gawin ang mga plugin gamit ang **anumang language** na makaka-produce ng C-compatible dynamic library (`.so` sa Android, `.dll` sa Windows). Kasama dito ang:
+
+- **Rust** (inirerekomenda - ginagamit dito ang Rust sa mga example)
 - **C/C++**
 - **Zig**
-- **Go** (with cgo)
-- **Any other language with C FFI support**
-- **Assembly** (If you are a masochist)
+- **Go** (gamit ang cgo)
+- **Anumang language na may support sa C FFI**
+- **Assembly** (Kung isa ka talagang masokista)
 
-This guide uses **Rust** for examples because Hachimi itself is written in Rust.
-However, the API is C-compatible, so you can use any language you prefer. Just ensure your `hachimi_init` function is exported with C calling convention.
+Ginagamit ng guide na ito ang Rust dahil ginawa mismo ang Hachimi Edge gamit ang Rust. Gayunpaman, ang API ay C compatible, kaya maaari mong gamitin ang anumang programming language na gusto mo. Siguraduhin lamang na ang iyong `hachimi_init` function ay nai-export gamit ang C calling convention.
 
-## Prerequisites
+## Mga kinakailangan
 
-Before you start, you should have:
+Bago ka makapagsimula, dapat may:
 
-- Experience with your chosen programming language.
-- Familiarity with the game's structure.
-- Development toolchain installed for your target platform.
+- May experience ka sa pinili mong programming language.
+- May kaalaman ka sa istraktura ng laro.
+- Mahy naka-install na development toolchain para sa target platform.
 
-::: warning
-Do not to make a malicious plugin that steals data or harms other players.
+::: warning Babala
+Huwag lumikha ng mga malisyosong plugin na nagnanakaw ng data o nakakasama sa ibang players.
 :::
 
-## Plugin structure
+## Istraktura ng plugin
 
 ### Entry point
 
-Every plugin must export a `hachimi_init` function. Create a `Cargo.toml`:
+Dapat mag-export ng `hachimi_init` na function ang bawat plugin. Gumawa ng `Cargo.toml`:
 
 ```toml
 [package]
@@ -46,14 +49,14 @@ crate-type = ["cdylib"]
 [dependencies]
 ```
 
-Then in `src/lib.rs`:
+At sa `src/lib.rs`:
 
 ```rust
 use std::ffi::{c_char, c_void};
 
 #[repr(C)]
 pub struct Vtable {
-    // Function pointers (see API Reference below)
+    // Function pointers (tignan ang API Reference sa ibaba)
 }
 
 #[repr(i32)]
@@ -77,19 +80,19 @@ pub extern "C" fn hachimi_init(vtable: *const Vtable, version: i32) -> InitResul
         VTABLE = Some(&*vtable);
     }
 
-    // Initialize your plugin here
+    // I-initialize ang iyong plugin dito
 
     InitResult::Ok
 }
 ```
 
-### The vtable
+### Ang vtable
 
-The vtable is a structure containing function pointers to Hachimi's API. You receive it in `hachimi_init` and should store it for use throughout your plugin.
+Ang vtable ay isang structure na naglalaman ng function pointers sa APi ng Hachimi. Nakukuha mo ito sa `hachimi_init` at iimbak ito para sa paggamit sa plugin.
 
-**Current API Version: 2** <!-- markdownlint-disable-line MD036 -->
+**Kasalukuyang API Version: 2** <!-- markdownlint-disable-line MD036 -->
 
-Always check the version parameter to ensure compatibility:
+Palaging suriin ang version parameter para siguraduhin ang compatibility:
 
 ```rust
 #[no_mangle]
@@ -98,7 +101,7 @@ pub extern "C" fn hachimi_init(vtable: *const Vtable, version: i32) -> InitResul
         return InitResult::Error;
     }
     if version < 2 {
-        // API version too old
+        // Masyadong luma ang API
         return InitResult::Error;
     }
 
@@ -126,9 +129,9 @@ unsafe fn get_hachimi_and_interceptor() -> (*const c_void, *const c_void) {
 }
 ```
 
-### Interceptor (function hooking)
+### Interceptor (pag-hook ng function)
 
-The interceptor allows you to hook and modify game functions:
+Nagbibigay-daan sa iyo ang interceptor na mag-hook at i-modify ang mga function sa laro:
 
 ```rust
 use std::ffi::c_void;
@@ -171,7 +174,7 @@ unsafe fn unhook_function(
 
 ### IL2CPP functions
 
-Access Unity's IL2CPP runtime:
+I-access ang IL2CPP runtime ng Unity:
 
 ```rust
 use std::ffi::{c_char, c_void, CStr, CString};
@@ -217,11 +220,11 @@ unsafe fn get_method(
 
 unsafe fn get_methods(klass: *mut c_void) -> impl Iterator<Item = *const c_void> {
     let mut iter: *mut c_void = std::ptr::null_mut();
-    
+
     std::iter::from_fn(move || {
         let vtable = VTABLE.unwrap();
         let method = (vtable.il2cpp_class_get_methods)(klass, &mut iter);
-        
+
         if method.is_null() {
             None
         } else {
@@ -295,7 +298,7 @@ unsafe fn get_singleton_instance(klass: *mut c_void) -> *mut c_void {
 ```rust
 use std::ffi::CString;
 
-// Log levels: 1=Error, 2=Warn, 3=Info, 4=Debug, 5=Trace
+// Mga log level: 1=Error, 2=Warn, 3=Info, 4=Debug, 5=Trace
 unsafe fn log(level: i32, tag: &str, message: &str) {
     let vtable = VTABLE.unwrap();
     let tag_cstr = CString::new(tag).unwrap();
@@ -324,7 +327,7 @@ unsafe fn log_warn(tag: &str, message: &str) {
 ```rust
 use std::ffi::{c_char, c_void, CString};
 
-// Load a PNG icon
+// Mag-load ng PNG icon
 const ICON_BYTES: &[u8] = include_bytes!("../icon.png");
 
 // Callback type
@@ -417,9 +420,9 @@ unsafe fn register_menu_section_with_icon(
 // register_menu_section_with_icon("My Settings", ICON_BYTES, my_section_callback);
 ```
 
-#### Ui widgets
+#### Mga widget sa UI
 
-Available UI functions for building your GUI:
+Mga available na function para sa pag-build ng iyong GUI:
 
 ```rust
 use std::ffi::CString;
@@ -481,7 +484,7 @@ unsafe fn ui_text_edit(ui: *mut c_void, buffer: &mut [u8]) -> bool {
 }
 ```
 
-#### Notifications
+#### Mga abiso
 
 ```rust
 unsafe fn show_notification(message: &str) -> bool {
@@ -491,9 +494,9 @@ unsafe fn show_notification(message: &str) -> bool {
 }
 ```
 
-### Android dex loading (api v2+)
+### Pag-load ng DEX sa Android (api v2+)
 
-Load and execute Java/Kotlin code on Android:
+Mag-load at mag-execute ng Java/Kotlin code sa Android:
 
 ```rust
 unsafe fn load_dex(dex_data: &[u8], class_name: &str) -> u64 {
@@ -543,8 +546,7 @@ unsafe fn unload_dex(handle: u64) -> bool {
 
 #### Java example (DEX side)
 
-Your Java/Kotlin class must expose **static** methods that match the signatures you call from Rust.
-This is a minimal Java example you can compile into a DEX and load with the helpers above:
+Dapat mag-expose ng **static** methods ang iyong Java/Kotlin code na tumtugma sa signatures na kino-call mo mula sa Rust. Ito ay isang minimal na Java example na maaari mong i-compile sa isang DEX at i-load nang may mga helper sa itaas:
 
 ```java
 package dev.hachimi;
@@ -564,13 +566,13 @@ public class DexExample {
 }
 ```
 
-When loading, use the fully-qualified class name:
+Kapag ilo-load, gamitin ang fully-qualified class name:
 
 - `class_name`: `"dev.hachimi.DexExample"`
 - `hello()` signature: `"()V"`
 - `setVisibleString(String)` signature: `"(Ljava/lang/String;)V"`
 
-#### Build the DEX
+#### I-build ang DEX
 
 ```bash
 ANDROID_JAR=~/Android/Sdk/platforms/android-34/android.jar
@@ -592,7 +594,7 @@ d8 --lib "$ANDROID_JAR" \
 cp /tmp/hachimi_dex/out/classes.dex assets/dex_example.dex
 ```
 
-Then load it from Rust:
+At i-load ito mula sa Rust:
 
 ```rust
 let dex_bytes = include_bytes!("../assets/dex_example.dex");
@@ -601,9 +603,9 @@ dex_call_static_noargs(handle, "hello", "()V");
 dex_call_static_string(handle, "setVisibleString", "(Ljava/lang/String;)V", "true");
 ```
 
-## Complete example plugin
+## Kumpletong example plugin
 
-Here's a complete working example:
+Ito ang gumagana at kumpletong halimbawa:
 
 ```rust
 use std::ffi::{c_char, c_void, CString};
@@ -841,15 +843,15 @@ pub extern "C" fn hachimi_init(vtable: *const Vtable, version: i32) -> InitResul
 
 ## Best practices
 
-1. **Version Checking**: Always check the API version in `hachimi_init`
-1. **Error Handling**: Return `InitResult::Error` if initialization fails
-1. **Logging**: Use the logging API for debugging and user feedback
+1. **Pagsusuri ng version**: Palaging suriin ang API version sa `hachimi_init`
+1. **Pag-handle ng error**: I-return ang `InitResult::Error` kapag mabigo ang initialization
+1. **Logging**: Gamitin ang logging API para sa pag-debug at user feedback.
 
-## Hooking and il2cpp examples
+## Mga halimbawa sa pag-hook at il2cpp
 
-### Hooking game functions
+### Pag-hook ng game functions
 
-Example of hooking a game function:
+Halimbawa ng pag-hook ng mga game function:
 
 ```rust
 type UpdateFunc = unsafe extern "C" fn(*mut c_void);
@@ -900,7 +902,7 @@ unsafe {
 }
 ```
 
-### Working with il2cpp objects
+### Paggalaw sa mga il2cpp objects
 
 ```rust
 unsafe fn example_il2cpp_usage() {

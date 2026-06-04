@@ -44,6 +44,7 @@ Hindi mapapatunay ng mga Hachimi Edge developer ang mga third-party plugins at h
 
 ## Mga available na plugin
 <!-- List plugins here. -->
+Wala pa
 
 ## Mga susunod na gagawin
 

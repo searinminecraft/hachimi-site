@@ -270,7 +270,7 @@ Dahil sa na-introduce na scoped storage sa Android 10, Maaaring mabigo ang Hachi
 1. Isara ang laro.
 1. Buksan ang iyong file manager at mag-navigate sa `Android/media`.
 1. Gumawa ng folder tawwag `jp.co.cygames.umamusume` kung kailangan.
-1. Sa loob ng bagong ginawang folder, gumawa ng foler tawag `hachimi`.
+1. Sa loob ng bagong ginawang folder, gumawa ng folder tawag `hachimi`.
 1. Buksan ulit ang laro.
 
 ### I/O error: File exists (os error 17)
@@ -325,7 +325,7 @@ Kapag habang nagpa-patch may binanggit na `libmain.so` sa logs, maaari mong subu
 1. I-force redownload ang Hachimi Edge sa UmaPatcher Edge settings, at mag-patch ulit.
 1. I-clear ang cache at data ng UmaPatcher Edge sa `App info → Storage`.
 1. I-reinstall ang UmaPatcher Edge, at mag-patch ulit.
-1. (Advanced!) I-restart ang iyong device, i-wipe ang cache, at mag-patch muli.
+1. (Advanced!) I-restart ang iyong device sa recovery mode (gamitin ang Google kung paano mag-boot sa recovery mode), i-wipe ang cache (karaniwan na tawag "Wipe cache partition"), at subukang mag-patch muli.
 <!-- Todo: How safe is the last one...? -->
 
 ### Hindi maka-log in gamit ang Google Play account

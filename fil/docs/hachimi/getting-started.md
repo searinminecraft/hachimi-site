@@ -64,7 +64,7 @@ Pakitignan ang mga specific na guide at magpatuloy sa pahinang ito pagkatapos i-
 
 Sa unang pag-launch ng laro pagkatapos i-install ang Hachimi Edge, ipapakita sa iyo ang dialog na ito:
 
-![First Time Setup](/assets/first-time-setup.jpg)
+![First Time Setup](/assets/fil/first-time-setup.webp)
 
 ::: details Di ko 'to nakikita!
 **Kapag lumilipat ka sa Edge**:  

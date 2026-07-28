@@ -14,7 +14,7 @@ Hachimi Edge mendukung [sistem plugin](plugins/about) agar bisa memperluas fungs
 ## Berkontribusi
 
 Silakan baca dokumen terkait dan periksa berbagai repositori Git yang ada. Kamu bisa membuka *Issue* di sana atau langsung mengirimkan PR (*Pull Request*),  dalam beberapa kasus disarankan untuk mendiskusikan hal tersebut terlebih dahulu dengan tim.
-Jika kamu membutuhkan bantuan lebih lanjut atau ingin menghubungi kami secara langsung, bergabunglah dengan [server Discord](https://discord.gg/hachimimod) dan sebut (*mention*) *role* `Developer` di saluran `#feedback`
+Jika kamu membutuhkan bantuan lebih lanjut atau ingin menghubungi kami secara langsung, bergabunglah dengan [server Discord](https://discord.gg/YjBgmuqqYr) dan sebut (*mention*) *role* `Developer` di saluran `#feedback`
 
 ### Sebagai pengembang Hachimi Edge
 

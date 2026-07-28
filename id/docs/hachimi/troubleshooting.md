@@ -349,4 +349,4 @@ Hapus instalan Hachimi menggunakan program penginstal (*installer*). Usahakan gu
 
 Jika kamu memiliki beberapa versi game yang terinstal, pastikan kamu menghapusnya dari jalur (*path*) yang benar. Kemudian, instal ulang Hachimi Edge terbaru.
 
-Jika cara tersebut tidak berhasil, kamu bisa bertanya di saluran `help/support` di [Discord Hachimi Project](https://discord.gg/hachimimod) atau [Discord Umachimi-ID](https://discord.gg/4zvW4VhrYV) untuk dukungan berbahasa Indonesia. Harap sebutkan server game, platform dan model perangkat kamu, serta jelaskan masalah kamu secara jelas dan cara apa saja yang sudah kamu coba.
+Jika cara tersebut tidak berhasil, kamu bisa bertanya di saluran `help/support` di [Discord Hachimi Project](https://discord.gg/YjBgmuqqYr) atau [Discord Umachimi-ID](https://discord.gg/4zvW4VhrYV) untuk dukungan berbahasa Indonesia. Harap sebutkan server game, platform dan model perangkat kamu, serta jelaskan masalah kamu secara jelas dan cara apa saja yang sudah kamu coba.

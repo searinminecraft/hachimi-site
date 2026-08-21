@@ -2,75 +2,75 @@
 outline: [2,3]
 ---
 
-# Translating
+# Pag-translate
 
 ::: tip
 Kapag direkta kang na-link dito, inirerekomenda namin na [basahin ang guide sa simula](welcome).
 :::
 
-Now that you better understand the basics of the game's assets and how Hachimi uses them, let's look at how to actually start translating.
+Ngayong mas naiintindihan mo na ang mga pangunahing kaalaman ng mga asset ng laro at kung paano ginagamit ng Hachimi ang mga ito, tingnan natin kung paano aktwal na simulan ang pagsasalin.
 
-## Tools
+## Mga Kagamitan
 
-There are a number of different tools available to create and edit translations.
+Mayroong ilang iba't ibang mga tool na magagamit upang lumikha at mag-edit ng mga translations.
 
 ### ZokuZoku
 
-Developed by the creator of Hachimi, this is currently the easiest to start using and supports most Hachimi formats.
+Binuo ng lumikha ng Hachimi, ito ang kasalukuyang pinakamadaling simulan ang paggamit at sinusuportahan ang karamihan sa mga format ng Hachimi.
 
-However, it can no longer edit stories after a major update on the Japanese server on September 24, 2025, and has multiple unsolved bugs and usage issues. It is currently unmaintained.
+Gayunpaman, hindi na ito makakapag-edit ng mga kwento pagkatapos ng malaking update sa Japanese server noong Setyembre 24, 2025, at marami itong hindi nalutas na bug at mga isyu sa paggamit. Ito ay kasalukuyang hindi pinapanatili.
 
-Check out the [ZokuZoku guide](using-zokuzoku.html).
+Tingnan ang [ZokuZoku guide](using-zokuzoku).
 
 ### ZokuZoku Edge
 
-This is an active community fork of the original ZokuZoku extension. The goal is to restore the editing functionalities, add quality-of-life improvements, and resolve issues left by the main ZokuZoku developer.
+Ito ay isang aktibong community fork ng orihinal na ZokuZoku extension. Ang layunin ay ibalik ang mga functionality sa pag-eedit, magdagdag ng mga pagpapabuti sa kalidad ng buhay, at lutasin ang mga isyung iniwan ng pangunahing developer ng ZokuZoku.
 
-Although this fork is functional, some features may remain unstable depending on the usecase.
+Bagama't gumagana ang fork na ito, maaaring manatiling hindi matatag ang ilang feature depende sa usecase.
 
-Links: [Source Code](https://github.com/Mario0051/ZokuZoku), [Extension Builder and Release Repository](https://github.com/THShafi170/ZokuZoku-Edge)
+Mga Link: [Source Code](https://github.com/Mario0051/ZokuZoku), [Extension Builder at Release Repository](https://github.com/Tenshou170/ZokuZoku-Edge)
 
 ### UmaTL Legacy Tools
 
 ::: info
-An update is on its way to let these support all parts of the game properly, with new features. When complete, this should become the main toolset.
+May paparating nang update para masuportahan nang maayos ng mga ito ang lahat ng bahagi ng laro, gamit ang mga bagong feature. Kapag nakumpleto na, ito na ang magiging pangunahing toolset.
 :::
 
-These are part of the earliest game translation patch, and as such don't directly support Hachimi's formats. They are also a bit less user-friendly.
+Ang mga ito ay bahagi ng pinakamaagang patch ng pag-translate ng laro, at dahil dito ay hindi direktang sumusuporta sa mga format ng Hachimi. Medyo hindi rin gaanong madaling gamitin ang mga ito.
 
-They can however still be used with the aid of a few extra scripts, and are particularly handy for stories, providing more features and a smoother experience.
+Gayunpaman, maaari pa rin itong gamitin sa tulong ng ilang karagdagang script, at partikular na madaling gamitin para sa mga kuwento, na nagbibigay ng mas maraming feature at mas maayos na karanasan.
 
-Check out the [UmaTL guide](using-umatl).
+Tingnan ang [Gabay sa UmaTL](using-umatl).
 
-### Hachimi Tools
+### Kagamitan sa Hachimi (Hachimi Tools)
 
-This is a small extra toolset focused mainly on dealing with `textures` and `uianimation` assets. It also provides some random useful features.
+Ito ay isang maliit na karagdagang toolset na pangunahing nakatuon sa pagharap sa mga `texture` at `uianimation` assets. Nagbibigay din ito ng ilang mga kapaki-pakinabang na tampok.
 
-These are quite technical, so they assume the user has sufficient knowledge and only include basic documentation in their readme.
+Medyo teknikal ang mga ito, kaya ipinapalagay nila na ang gumagamit ay may sapat na kaalaman at isinasama lamang ang mga pangunahing dokumentasyon sa kanilang readme.
 
-Like ZokuZoku, these are unmaintained and stopped working after a game update.
+Tulad ng ZokuZoku, ang mga ito ay hindi pinapanatili at humihinto sa paggana pagkatapos ng isang pag-update ng laro.
 
-Use [this maintained fork](https://github.com/noccu/hachimi-tools) with fixed support and new features.
+Gamitin ang [pinapanatiling fork na ito](https://github.com/noccu/hachimi-tools) na may nakapirming suporta at mga bagong tampok.
 
 ### Carotene Tools
 
-Part of the older Carotene patch. These are unmaintained and no longer work correctly.
+Bahagi ng mas lumang Carotene patch. Ang mga ito ay hindi pinapanatili at hindi na gumagana nang tama.
 
-## Dealing with specific translations
+## Pagharap sa mga partikular na pagsasalin
 
 ### UI (Localize / Hashed dicts)
 
-Localize is currently only supported by [ZokuZoku](#zokuzoku).
+Ang `localize_dict` ay kasalukuyang sinusuportahan lamang ng [ZokuZoku](#zokuzoku).
 
-Hashed dicts are not supported by any tools and must be manually edited. You will also require a way of generating the correct hash. [This tool](https://github.com/Hidden-is-fun/UmamusumeTextHashCalc/releases/tag/v0.1) is one such way.
+Ang mga hashed dicts ay hindi sinusuportahan ng anumang mga tool at dapat manu-manong i-edit. Kakailanganin mo rin ng isang paraan ng pagbuo ng tamang hash. Ang [tool na ito](https://github.com/Hidden-is-fun/UmamusumeTextHashCalc/releases/tag/v0.1) ay isang ganitong paraan.
 
-You must dump the `localize_dict.json` file from the game using Hachimi's menu after game updates. Enable `translator mode` to see the option.
+Dapat mong i-dump ang `localize_dict.json` file mula sa laro gamit ang menu ni Hachimi pagkatapos ng mga pag-update ng laro. Paganahin ang `translator mode` upang makita ang opsyon.
 
 ### MDB
 
-In most cases you should currently still use [ZokuZoku](#zokuzoku). UmaTL tools are usable if you know what you're doing, and occasionally provide advantages.
+Sa karamihan ng mga kaso, dapat mo pa ring gamitin ang [ZokuZoku](#zokuzoku). Magagamit ang mga tool ng UmaTL kung alam mo ang iyong ginagawa, at paminsan-minsan ay nagbibigay ng mga bentahe.
 
-Pay attention in `text_data`, there are many categories and sometimes these are duplicated fully or partially. Combinations also exist.
+Bigyang-pansin ang `text_data`, maraming kategorya at kung minsan ang mga ito ay nadoble nang buo o bahagyang. Mayroon ding mga kombinasyon.
 
 ### Dialogue (Story / Race / Lyrics asset dicts)
 
@@ -80,57 +80,57 @@ The game update on 2025/09/24 encrypted both assets and the `meta` database inde
 
 Your best choice is to use [Legacy UmaTL tools](#umatl-legacy-tools), which also has a few relevant features not found in other tools.
 
-### Textures (incl. Atlases)
+### Textures (kasama ang atlases)
 
-Use the [special toolset](#hachimi-tools) to both extract textures and create the `diff.png` after editing.
-Once a diff is created, you can also work from that for game updates by using the tools.
+Gamitin ang [espesyal na toolset](#kagamitan-sa-hachimi-hachimi-tools) para kumuha ng mga textures at lumikha ng `diff.png` pagkatapos i-edit.
 
-You will need an image editor to edit the images. Take care of the size limitations in game, Hachimi currently doesn't support changing those.
+Kapag nagawa na ang isang diff, maaari ka ring magtrabaho mula roon para sa mga update ng laro gamit ang mga kagamitan.
 
-Basic documentation is included with the tools.
+Kakailanganin mo ng isang editor ng imahe para i-edit ang mga imahe. Asikasuhin ang mga limitasyon sa laki sa laro, sa kasalukuyan ay hindi sinusuportahan ng Hachimi ang pagpapalit ng mga iyon.
+
+Kasama sa mga kagamitan ang pangunahing dokumentasyon.
 
 ### UIAnimation
 
-Use the [special toolset](#hachimi-tools) to extract and update.
-Basic documentation is included with the tools.
+Gamitin ang [espesyal na toolset](#kagamitan-sa-hachimi-hachimi-tools) para mag-extract at mag-update.
+Kasama sa mga tool ang pangunahing dokumentasyon.
 
-Many of these will only list metadata for their matching textures (see above). Currently, that is the source's asset hash for the protection system.
+Marami sa mga ito ay maglilista lamang ng metadata para sa kanilang mga katugmang texture (tingnan sa itaas). Sa kasalukuyan, iyon ang asset hash ng pinagmulan para sa sistema ng proteksyon.
 
-When these include text, simply edit the text in the extracted file. You can also adjust its size and positioning, which can be extremely useful.  
-These will extract to either `flash` or `flashcombine`. Make sure to check both.
-You should remove any parts ([JSON objects](https://www.w3schools.com/js/js_json.asp)) not edited.
+Kapag may kasamang text ang mga ito, i-edit lamang ang text sa nakuha na file. Maaari mo ring ayusin ang laki at posisyon nito, na maaaring maging lubhang kapaki-pakinabang.
+I-extract ang mga ito sa alinman sa `flash` o `flashcombine`. Siguraduhing suriin ang pareho.
+Dapat mong alisin ang anumang bahagi ([JSON objects](https://www.w3schools.com/js/js_json.asp)) na hindi na-edit.
 
-You'll be served well by having a way to check into the `meta` file (it is an SQLite DB) and browsing or searching for potential asset names.
-When text is not found anywhere else, it is likely "hidden" in one of these files. Common for some parts of a scenario's UI.
+Mas makakatulong sa iyo ang pagkakaroon ng paraan para tingnan ang `meta` file (ito ay isang SQLite DB) at mag-browse o maghanap ng mga potensyal na pangalan ng asset.
+Kapag ang text ay hindi matatagpuan sa ibang lugar, malamang na "nakatago" ito sa isa sa mga file na ito. Karaniwan para sa ilang bahagi ng UI ng isang senaryo.
 
 ### Movies
 
 ::: info
-Experimented yourself or have more info? Please let us know!
+Nag-eksperimento ka ba o mayroon ka pang karagdagang impormasyon? Pakisabi sa amin!
 :::
 
-The game's movies are in USM format and encrypted. It's not the easiest thing to deal with and comes with many caveats. Many options have not yet been tested. Good technical skills and time to research and experiment are recommended.
-  
-You can use various tools to decrypt and re-encrypt them, using key `75923756697503`/`(0000)450D608C479F`.
+Ang mga movie ng laro ay nasa USM format at naka-encrypt. Hindi ito ang pinakamadaling gawin at may kasamang maraming mga babala. Maraming mga opsyon ang hindi pa nasusubukan. Inirerekomenda ang mahusay na teknikal na kasanayan at oras para sa pananaliksik at eksperimento.
+
+Maaari kang gumamit ng iba't ibang mga tool upang i-decrypt at muling i-encrypt ang mga ito, gamit ang key na `75923756697503`/`(0000)450D608C479F`.
 
 - [USMBreak](https://github.com/beer-psi/usmbreak)
 - [WannaCRI](https://github.com/donmai-me/WannaCRI)
 - [CRID USM Demux Tool](https://mega.nz/file/TJQniYwL#Dp_D-KvzVlVgTwqzVJc1n3vslBZsHdy8pdDqzhRtsOI)
 - [VGMToolbox](https://sourceforge.net/projects/vgmtoolbox/)
 
-In between, the video can be edited any usual way, though our main purpose is adding subtitles. Note that the original video already comes "hard-subbed" in Japanese.
+Sa pagitan, maaaring i-edit ang video sa anumang karaniwang paraan, bagama't ang pangunahing layunin namin ay ang pagdaragdag ng mga subtitle. Tandaan na ang orihinal na video ay mayroon nang "hard-subbed" sa wikang Japanese.
 
 ::: info
-In the future, Hachimi Edge might support soft-subtitles to obviate the need for messing with video files.
+Sa hinaharap, maaaring suportahan ng Hachimi Edge ang mga soft-subtitle upang maiwasan ang pangangailangang manggulo sa mga video file.
 :::
 
-Videos should likely remain in the same format and resolution. For simple cases you should be able to use the relevant encoder for its format (MPEG1/H264/VP9?). You can also try the [official SDK](https://archive.org/details/new-criware-sdk) which *should* help with more advanced cases too.  
-Be warned some files contain an alpha channel as second video stream. Most tools don't deal with this well.
+Malamang na dapat manatili ang mga video sa parehong format at resolution. Para sa mga simpleng kaso, dapat mong magamit ang kaugnay na encoder para sa format nito (MPEG1/H264/VP9?). Maaari mo ring subukan ang [opisyal na SDK](https://archive.org/details/new-criware-sdk) na *dapat* makatulong din sa mas advanced na mga kaso. Mag-ingat, ang ilang mga file ay naglalaman ng alpha channel bilang pangalawang video stream. Karamihan sa mga tool ay hindi mahusay na nakikitungo dito.
 
-Audio should not be touched and ideally copied directly, without de-/encryption. This might require it to be processed separately. Check the docs for your tools.
+Ang audio ay hindi dapat hawakan at mainam na kopyahin nang direkta, nang walang de-/encryption. Maaaring kailanganin itong iproseso nang hiwalay. Tingnan ang mga dokumento para sa iyong mga tool.
 
-## Other considerations
+## Iba pang mga konsiderasyon
 
-Hachimi works on both Windows and Android. You will need access to an up-to-date Android `meta` file to generate the hashes for the `outdated asset protection system`. It is not required for anything else.
+Gumagana ang Hachimi sa Windows at Android. Kakailanganin mo ng access sa isang updated na Android `meta` file upang makabuo ng mga hash para sa luma na asset protection system. Hindi na ito kinakailangan para sa anumang iba pa.
 
-You do not need tools at all, of course. Sometimes it is easier to make an edit directly in a `.json` file. Searching through them can be a handy way to find something as well.
+Hindi mo na kailangan ng mga tool, siyempre. Minsan mas madaling gumawa ng pag-edit nang direkta sa isang `.json` file. Ang paghahanap sa mga ito ay maaari ring maging isang madaling paraan upang makahanap ng isang bagay.

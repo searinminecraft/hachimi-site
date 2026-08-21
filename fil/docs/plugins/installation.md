@@ -23,11 +23,9 @@ Sa Windows, ang mga plugin ay dapat i-configure sa config file.
 1. **I-edit ang config**: Buksan ang `config.json` sa `hachimi` folder idagdag ang plugin name:
    ```json
    {
-     "windows": {
-       "load_libraries": [
-         "hachimi\\hachimi_myplugin.dll"
-       ]
-     }
+      "load_libraries": [
+        "hachimi\\hachimi_myplugin.dll"
+      ]
    }
    ```
 1. **I-save at i-restart**: I-save ang config file at i-restart ang laro

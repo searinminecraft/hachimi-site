@@ -90,4 +90,6 @@ Kung di ka komportable sa paggawin nito o magkaroon ka ng mga isyu, mas-ligtas n
 
 **DMM**: I-click ang 3 dots sa tabi ng pangalan ng laro sa DMM -> 🛈 icon -> 📁 icon
 
+**KomoeGame**: I-click ang settings icon -> Resources -> Locate Game Files
+
 **Android**: Hindi ito karaniwang naa-access, pero nakalagay ang ilang data sa `Android/media/jp.co.cygames.umamusume` (maaaring mag-iba depende sa phone brand). Para sa full access, kailangan mong i-patch ang laro na may `"Export internal data documents provider"` na patch ng Revanced at gumamit ng file explorer na may document provider selector o naka-root ka at i-access ang `/data/data/jp.co.cygames.umamusume/files`. (Ang mga tutorial kung paano gawin ang mga ito ay wala sa saklaw ng proyekto, kaya gamitin ang Google.)

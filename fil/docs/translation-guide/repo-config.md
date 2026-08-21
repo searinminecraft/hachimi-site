@@ -4,12 +4,67 @@ outline: [2,3]
 
 # Pag-configure ng translation repo
 
-May mga kani-kanilang configuration na hiwalay sa user config ng Hachimi ang mga repo para ayusin ang kanilang behavior. Tinatakda ng mga maintainer ng repo ang config na ito. Kung ikaw ito, pakibasa ang pahinang ito para maintindihan ang mga opsyon
+May mga kani-kanilang configuration at info file na hiwalay sa user config ng Hachimi ang mga repo para ayusin ang kanilang behavior. Tinatakda ng mga maintainer ng repo ang mga ito. Kung ikaw ito, pakibasa ang pahinang ito para maintindihan ang mga opsyon
 
-JSON format ang configuration file at ilalagay ito sa `localized_data` folder.
+JSON format ang mga ito at ilalagay ito sa `localized_data` folder.
 Relative ang lahat ng mga path sa config sa folder na iyan.
 
-## Mga opsyon
+## Info file
+
+Nilalaman ng info file ang mga detalye tungkol sa repo at ipapakita ito sa mga
+user sa `Palitan ang Translation Repo` at repo info ng window ng Hachimi GUI.
+Dapat tawag `info.json` ang file na ito.
+
+::: warning
+**Hindi sinusuportahan** ang mga relatibong path sa mga URL.
+:::
+
+```json
+"name": "Pangalan ng Translation Repo",
+"description": "Paglalarawan ng Translation Repo",
+"language": "en"
+```
+
+Basic na impormasyon, similar sa repo selector. Maaari kang magdagdag ng
+mas-detalyeng paglalarawan dito, dahil mas-malaki ang espasyo at walang
+ibang repo entries. Ginagamit lang ang `language` key bilang label at
+maaaring maglaman ng anumang text.
+
+```json
+"homepage": "https://codeberg.org/user/repo",
+"links": [
+    ["button_name", "https://example.com"]
+    ["button_name2", "https://example.com"]
+    // …
+]
+```
+
+Mga URL na kaugnay sa repo. Maaaring pangalanan ang ang mga link
+sa `links` array sa anumang gusto mo. Ang bawat entry ay magpapakita
+ng mga button na maaaring i-click, na magbubukas ng kanilang link.
+
+```json
+"changelog_url": "https://example.com/CHANGELOG.txt"
+```
+
+Isang URL sa file na naglalaman ng impormasyon sa update. Ipapakita ang
+nilalaman ng file na ito kapag pinindot ang `Ipakita ang Pagbabago` na
+button sa translation update notification window. Ginagamit ito para
+ilista ang mga pagbabago at dapat madalas na i-update.
+
+Parehong sinusuportahan ang plaintext o markdown, pero hindi sinusuportahan
+ang mga link sa markdown. **Dapat** matapos sa `.md`, `.markdown` o `.txt`
+ang file.
+
+```json
+"maintainer": "maintainer_name",
+"contributors": "https://example.com/contributors-list.html"
+```
+
+Mga pangalan ng contributor. Sinusuportahan ng `contributors` key ang isang
+`.html` web page URL, newline-separated na `.txt` file, o isang array.
+
+## Config file
 
 Hindi kumpleto ang pahinang ito. Ang punong internal na representasyon ng lahat ng mga available na opsyon ay mahahanap sa [source code](https://github.com/kairusds/Hachimi-Edge/blob/main/src/core/hachimi.rs#L574).
 
@@ -50,6 +105,15 @@ Maaaring maglaman ng anumang file ang bundle na ito, ngunit kulang sa ngayon ang
 ```
 
 Ang internal path sa loob ng `extra_asset_bundle` para maghanap ng custom na font, kung kinakailangan.
+
+``` json
+"text_common_best_fit": false
+```
+
+I-enable ang "best fit" wrapping ng Unity sa lahat ng TextCommon objects.
+Awtomatiko nitong ira-wrap at isa-scale ang text para magkasya sa text
+area bounds. Tandaan. Hindi palaging tumutugma sa inaasahang laki ng
+element ang bounds.
 
 ### Localized text functions
 
@@ -117,23 +181,6 @@ Mga multiplyer na ina-apply sa text frame/box settings. Karaniwan itong ginagami
 Opsyonal na dict na nagpapahiwatig ng pinakamataas na bilang ng linya bawat uri ng systext.  
 Ang mga key nito ay ang "type" na nahahanap sa `cue_sheet` column ng MDB: `snd_vo_*TYPE*_`. Ang mga value nito ang max lines para sa uri na iyan.
 Maaari ding i-specify ang `"default"` key, na gagamitin kapag walang anumang uri ang tumutugma. Kapag hindi nakatakda, `4` ang default.
-
-``` json
-"skill_formatting": {
-    "name_length": 18,
-    "desc_length": 18,
-    "name_short_lines": 1,
-
-    "name_short_mult": 1.0,
-    "name_sp_mult": 1.0
-}
-```
-
-Mga custom na haba ng linya para sa mga skills. Ginagamait kung saanman pinapakita ang skills.  
-Mga value ibinibigay bilang game-internal (pre-multiply). Opsyonal ang bawat value, gayundin ang mismong dict.
-
-- `Short`: tumutukoy sa mga kasanayang ipinapakita sa isang dobleng listahan na walang paglalarawan, tulad ng screen ng impormasyon ng Umamusume.
-- `SP`: tumutukoy sa pag-render ng skill points sa tabi ng pangalan, tulad ng pag-upgrade.
 
 ### Mga karagdagang functions
 

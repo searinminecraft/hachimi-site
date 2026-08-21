@@ -355,4 +355,4 @@ Hindi sinusuportahan ng Hachimi o laro ang mga emulator. Maaari mo silang pagana
 
 I-uninstall ang Hachimi gamit ang installer. Subukang gamitin ang version na ginamit mo sa pag-install ng kasalukuyan mong version, ngunit dapat ay gumana nang maayos ang pinakabago.
 Kung may marami kang version ng laro na naka-install, siguraduhin na nag-uninstall ka sa tamang path. at i-reinstall ang pinakabagong Hachimi Edge.
-Kung hindi ito gumana, maaari kang magtanong sa `help/support` channel sa [Hachimi Project Discord](https://discord.gg/hachimimod). Pakisabi ang iyong game server, device platform at model, at malinaw na ipaliwanag ang iyong isyu at kung ano ang iyong sinubukan.
+Kung hindi ito gumana, maaari kang magtanong sa `help/support` channel sa [Hachimi Project Discord](https://discord.gg/YjBgmuqqYr). Pakisabi ang iyong game server, device platform at model, at malinaw na ipaliwanag ang iyong isyu at kung ano ang iyong sinubukan.

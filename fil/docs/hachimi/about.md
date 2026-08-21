@@ -4,7 +4,7 @@ title: Tungkol
 
 # Hachimi <!-- markdownlint-disable-line MD025 -->
 
-[![Discord server](https://dcbadge.limes.pink/api/server/https://discord.gg/hachimimod)](https://discord.gg/hachimimod)
+[![Discord server](https://dcbadge.limes.pink/api/server/https://discord.gg/YjBgmuqqYr)](https://discord.gg/YjBgmuqqYr)
 
 Translation at enhancement mod para sa UM:PD.
 

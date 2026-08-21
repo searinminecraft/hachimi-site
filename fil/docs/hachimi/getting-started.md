@@ -16,7 +16,7 @@ Kung magkaroon ka ng anumang problema, tignan ang [Troubleshooting](troubleshoot
 
 ## Compatibility
 
-Sinusuportahan ng Hachimi Edge ang Steam, DMM, at Android versions para sa Japanese server, at ang Steam version para sa Global server.
+Sinusuportahan ng Hachimi Edge ang Steam, DMM, at Android versions para sa Japanese server, Steam version para sa Global server, at ang KomoeGame version para sa TW server.
 
 ::: details Mga detalye
 
@@ -26,6 +26,7 @@ Sinusuportahan ng Hachimi Edge ang Steam, DMM, at Android versions para sa Japan
 | --- | :---: |
 | JP (DMM) | ✅ |
 | JP (Steam) | ✅ |
+| TW (KomoeGame) | ✅ |
 | KR | ❌ |
 | Global | ✅ |
 | Emulators (anumang region) | ❌ |

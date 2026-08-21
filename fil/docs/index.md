@@ -14,7 +14,7 @@ Sinusuportahan ng Hachimi Edge ang isang [plugin system](plugins/about) na nagbi
 ## Pag-contribute
 
 Pakibasa ang mga docs na may kaugnayan at tignan ang mga iba't ibang git repos. Maaari kang magbukas ng Issue doon o direktang mag-send ng PR, bagama't sa karamihan ng mga kaso ay inirerekomenda na makipag-usap muna kasama ang team.
-Kung kailangan mo ng tulong o gusto mong makipag-ugnayan sa amin nang direkta, sumali sa aming [Discord server](https://discord.gg/hachimimod) at i-mention ang `Developer` role sa `#feedback`.
+Kung kailangan mo ng tulong o gusto mong makipag-ugnayan sa amin nang direkta, sumali sa aming [Discord server](https://discord.gg/YjBgmuqqYr) at i-mention ang `Developer` role sa `#feedback`.
 
 ### Bilang Hachimi Edge developer
 

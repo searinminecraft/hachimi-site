@@ -52,3 +52,10 @@ Only add the file extensions if you see them on the originals. Windows can hide 
 1. Move it to `umamusume.exe.local` and rename it to `apphelp.dll`.
 
 ➡ Continue with [First Time Setup](getting-started#first-time-setup).
+
+### KomoeGame (TW)
+
+1. Download the latest `hachimi.dll` from the [Releases page](https://github.com/kairusds/Hachimi-Edge/releases).
+1. Rename it to `winhttp.dll` and put it in the [game install folder](faqs#how-do-i-find-the-game-install-folder).
+
+➡ Continue with [First Time Setup](getting-started#first-time-setup).

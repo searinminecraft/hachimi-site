@@ -90,4 +90,6 @@ If you're uncomfortable with this or run into issues, it's safe to delete the co
 
 **DMM**: Click the 3 dots next to the game name in DMM -> 🛈 icon -> 📁 icon
 
+**KomoeGame**: Click on the settings icon -> Resources -> Locate Game Files
+
 **Android**: Not accessible normally, but some data is stored at Android/media/jp.co.cygames.umamusume (might differ with phone brand). For the full access, you need to have the game patched with ReVanced's `"Export internal data documents provider"` patch and use a file explorer with a document provider selector to open it or be rooted and access `/data/data/jp.co.cygames.umamusume/files`. (The tutorials on how to do these are out of scope for the project, so use Google.)
